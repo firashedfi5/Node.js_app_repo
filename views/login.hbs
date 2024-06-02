@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/signin_signup_style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Page de Connexion</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="content">
+
+            <h1 class="logo" style="color: white;"> Pet Care Connect</h1>
+
+            <div class="text-sci">
+
+                <h2>welcome! <br></h2>
+
+                {{#if message}}
+                    <div>{{message}}</div>
+                {{/if}}
+
+                {{!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Dolor harum illo vitae officia assumenda unde consectetur </p> --}}
+
+                <div class="social-icons">
+
+                    <a href="#"><i class='bx bxl-linkedin' ></i></a>
+                    <a href="https://www.facebook.com/"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-instagram' ></i></a>
+                    <a href="#"><i class='bx bxl-twitter' ></i></a>
+
+                </div>    
+            </div>
+        </div>
+
+        <div class="logreg-box">
+            <div class="from-box login">
+                <form action="/auth/login" method="post">
+
+                    <h2>sign in</h2>
+
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-envelope'></i></span>
+                        <input type="email" name="email">
+                        <label style="margin: 0px 0px 0px 20px;">Email</label>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                        <input type="password" name="password">
+                        <label style="margin: 0px 0px 0px 36px;">Password</label>
+                    </div>
+
+                    {{#if msg}}
+                        <h4 class="{{msg_type}}">{{msg}}</h4>
+                    {{/if}}
+
+                    <button type="submit" class="btn">Sign in</button>
+
+                    <div class="login-register">
+                        <p>Don't have an account ? <a href="/register" class="register-link">Sing up</a></p>
+                    </div>
+
+                </form>
+            </div>
+
+            
+
+        </div>
+    </div>
+    
+</body>
+</html>

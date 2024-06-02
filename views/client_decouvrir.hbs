@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClientDecouvrir</title>
+    <link rel="stylesheet" href="/css/decouvrir_client_style.css">
+</head>
+<body>
+    <img src="/icons/up-arrow.png" alt="" class="up">
+    <div class="grid-layout">
+
+        {{> client_navbar}}
+
+        <div class="main">
+            <div class="main-son">
+                <div class="search-and-filter">
+
+                    {{!-- <div class="search">
+                        <form action="/client_decouvrir" method="post" novalidate>
+                            <input placeholder="Search..." type="text" name="search">
+                            <button type="submit">Go</button>
+                        </form>
+                    </div> --}}
+
+                </div>
+                <div class="post-container">
+                    {{#each rows}}
+                        <div class="post-content">
+                            <span><b>Username:</b><br>{{username}}</span>
+                            <span><b>Email:</b><br>{{email}}</span>
+                            <span><b>Role:</b><br>{{role}}</span>
+                            <span><b>Phone Number:</b><br>{{telephone}}</span>
+                        </div>
+                    {{/each}}
+                </div>
+                <div class="next-page">
+                    <div class="pagination">
+                        <a href=""><</a>
+                        <a href="" class="active">1</a>
+                        <a href="">2</a>
+                        <a href="">3</a>
+                        <a href="">4</a>
+                        <a href="">5</a>
+                        <a href="">></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer id="Contact-us">
+            <div class="contact">
+                <h4>Contact us</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus corporis odio accusamus soluta inventore. Rem maiores provident minima repudiandae nesciunt, vitae, iure molestiae consequatur eum quae eveniet deleniti accusantium ipsa!</p>
+            </div>
+            <div class="follow-us">
+                <h4>Follow us</h4>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/" target="_blank" title="Follow us on Facebook">
+                        <img src="/icons/facebook.png" alt="" width="40px">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" title="Follow us on Instagram">
+                        <img src="/icons/instagram.png" alt="" width="40px">
+                    </a>
+                    <a href="https://twitter.com/home?lang=en" target="_blank" title="Follow us on X">
+                        <img src="/icons/twitter.png" alt="" width="40px">
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="/js/main.js"></script>
+    {{!-- <script src="/js/dropdown.js"></script>
+    <script src="/js/search.js" defer></script> --}}
+</body>
+</html>

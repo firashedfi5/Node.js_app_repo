@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/edit_profile_gardien.css">
+    <title>EditProfileGardien</title>
+</head>
+<body>
+    <p style="margin: 30px 50px;">
+        <a href="/gardien_profile">Profile</a>/<a href="#">Modifier</a>
+    </p>
+    <div class="container">
+        {{#each rows}}
+            <form action="/edit_profile_gardien/{{this.id}}" method="post" novalidate>
+                <h2>Modifier le Profil du Gardien</h2>
+                <div class="grid_input">
+                    <div class="group">
+                        <input required type="text" class="input" name="username" value="{{this.username}}">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Username <span class="required_to_put"></span></label>
+                    </div>
+
+                    <div class="group">
+                        <input required type="text" class="input" name="email" value="{{this.email}}">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Email</label>
+                    </div>
+
+                    <div class="group" style="position: relative;">
+                        <input required type="text" class="input" name="telephone" value="{{this.telephone}}">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Telephone <span class="required_to_put">*</span></label>
+                    </div>
+
+                </div>
+                
+                <button class="button">
+                <span class="button-content">Update </span>
+                </button>
+
+
+            </form>
+        {{/each}}
+    </div>
+
+</body>
+</html>

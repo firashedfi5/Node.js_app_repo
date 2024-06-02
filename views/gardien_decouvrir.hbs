@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/gardien_decouvrir_style.css">
+    <title>GardienDecouvrir</title>
+</head>
+<body>
+    <img src="/icons/up-arrow.png" alt="" class="up">
+    <div class="grid-layout">
+
+        {{> gardien_navbar}}
+
+        <div class="main">
+            <div class="main-son">
+                <div class="search-and-filter">
+
+                    <div class="search">
+                        <form action="/gardien_decouvrir" method="post" novalidate>
+                            <input placeholder="Search..." type="text" name="search">
+                            <button type="submit">Go</button>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="post-container">
+                    {{#each rows}}
+                        <div class="post-content">
+                            <span><b>Id:</b> {{this.id}}</span>
+                            <span><b>Animaux:</b> {{this.animaux}}</span>
+                            <span><b>Nom de l'animal:</b> {{this.nom_de_animal}}</span>
+                            <span><b>Prestation:</b> {{this.prestation}}</span>
+                            <span><b>Ville:</b> {{this.ville}}</span>
+                            <span><b>Date:</b> {{this.date}}</span>
+                            <span><b>Numéro de téléphone:</b> {{this.numero_de_telephone}}</span>
+                            <span><b>Race:</b> {{this.race}}</span>
+                            <span><b>Sexe:</b> {{this.sexe}}</span>
+                            <span><b>Age:</b> {{this.age}}</span>
+                        </div>
+                    {{/each}}
+                </div>
+                <div class="next-page">
+                    <div class="pagination">
+                        <a href=""><</a>
+                        <a href="" class="active">1</a>
+                        <a href="">2</a>
+                        <a href="">3</a>
+                        <a href="">4</a>
+                        <a href="">5</a>
+                        <a href="">></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer id="Contact-us">
+            <div class="contact">
+                <h4>Contact us</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus corporis odio accusamus soluta inventore. Rem maiores provident minima repudiandae nesciunt, vitae, iure molestiae consequatur eum quae eveniet deleniti accusantium ipsa!</p>
+            </div>
+            <div class="follow-us">
+                <h4>Follow us</h4>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/" target="_blank" title="Follow us on Facebook">
+                        <img src="/icons/facebook.png" alt="" width="40px">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" title="Follow us on Instagram">
+                        <img src="/icons/instagram.png" alt="" width="40px">
+                    </a>
+                    <a href="https://twitter.com/home?lang=en" target="_blank" title="Follow us on X">
+                        <img src="/icons/twitter.png" alt="" width="40px">
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+</html>

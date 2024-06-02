@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    background-image: url(/pictures/paul-hanaoka-w2DsS-ZAP4U-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(10px);
+}
+
+.our-info {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(1, 1fr);
+}
+
+.our-info div {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 100px 0px;
+    align-items: center;
+}
+
+button {
+    background-color: black;
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+}
+
+h1 {
+    color: black;
+}
+
+button a {
+    color: white;
+    font-weight: bold;
+}
+
+img {
+    border-radius: 50%;
+    width: 300px;
+}
+

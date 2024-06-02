@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClientProfile</title>
+    <link rel="stylesheet" href="/css/profile_style.css">
+    {{!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /> --}}
+</head>
+<body>
+    <img src="/icons/up-arrow.png" alt="" class="up">
+    <div class="grid-layout">
+
+        {{> client_navbar}}
+
+        <div class="main">
+            <div class="profil_container">
+                <div class="titles">
+                    <h1>Mes Information</h1>
+                <h4>Ceci est compte <u style="font-size: larger;">Client</u></h4>
+                </div>
+                <div class="account">
+                    <img src="/pictures/asset_1.png" alt="" class="profil_picture">
+                    <div class="info_container">
+                        <span><b>Username</b><br>{{user.username}}</span>
+                        <span><b>Email</b><br>{{user.email}}</span>
+                        <span><b>Role</b><br>{{user.role}}</span>
+                        <span><b>Numéro de téléphone</b><br>{{user.telephone}}</span>
+                    </div>
+                    <div class="action" class="action">
+                        <a href="/edit_profile_client/{{user.id}}" title="Edit this post">Modifier</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <footer id="Contact-us">
+            <div class="contact">
+                <h4>Contact us</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus corporis odio accusamus soluta inventore. Rem maiores provident minima repudiandae nesciunt, vitae, iure molestiae consequatur eum quae eveniet deleniti accusantium ipsa!</p>
+            </div>
+            <div class="follow-us">
+                <h4>Follow us</h4>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/" target="_blank" title="Follow us on Facebook">
+                        <img src="/icons/facebook.png" alt="" width="40px">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" title="Follow us on Instagram">
+                        <img src="/icons/instagram.png" alt="" width="40px">
+                    </a>
+                    <a href="https://twitter.com/home?lang=en" target="_blank" title="Follow us on X">
+                        <img src="/icons/twitter.png" alt="" width="40px">
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="/js/main.js"></script>
+    {{!-- <script src="/js/dropdown.js"></script> --}}
+</body>
+</html>
