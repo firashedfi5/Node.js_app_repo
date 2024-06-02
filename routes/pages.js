@@ -4,7 +4,7 @@ const userController = require('../controllers/users')
 const postController = require("../controllers/postController");
 
 router.get("/", (req, res) => {
-    res.render('FirstPage')
+    res.render('HomePage')
 });
 router.get("/HomePage", (req, res) => {
     res.render('HomePage')
